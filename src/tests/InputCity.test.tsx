@@ -10,15 +10,6 @@ jest.mock("react-router-dom", () => ({
 }));
 
 describe("InputCityコンポーネントのテスト", () => {
-  test("テキストフィールドに入力された文字を表示する", () => {
-    // 前準備
-    const component = render(<InputCity />);
-    const textbox = component.getByRole("textbox");
-    // 文字を入力する
-    userEvent.type(textbox, "東京");
-    //検証
-    expect(textbox).toHaveValue("東京");
-  });
 
   test("テキストフィールドに文字が入力された状態でEnterキーが押されたとき、画面遷移する", () => {
     // 前準備

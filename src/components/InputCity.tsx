@@ -30,7 +30,7 @@ export const InputCity: React.FC = () => {
   }, [city]);
 
   const navigate = useNavigate();
-  const handleOnClick = function () {
+  const handleOnClick = () => {
     if (city) {
       // 都市が入力されている場合、遷移する
       navigate(`/weather/${city}`);
@@ -66,7 +66,7 @@ export const InputCity: React.FC = () => {
         InputProps={{
           endAdornment: (
             <InputAdornment position="end">
-              <IconButton edge="end" onClick={() => handleOnClick()}>
+              <IconButton edge="end" onClick={handleOnClick}>
                 <SearchIcon />
               </IconButton>
             </InputAdornment>
